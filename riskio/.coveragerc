@@ -1,0 +1,5 @@
+[run]
+source = /Users/jmhrovat/Desktop/riskio/riskio
+omit = */tests/*
+       */migrations/*
+       
