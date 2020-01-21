@@ -2,4 +2,8 @@
 source = /Users/jmhrovat/Desktop/riskio/riskio
 omit = */tests/*
        */migrations/*
+       *manage.py*
+       *asgi.py*
+       *wsgi.py*
+       *__init__.py*
        
