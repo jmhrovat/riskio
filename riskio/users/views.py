@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django.http import HttpResponse
 
-def authentication(request):
+def register(request):
 
     #If the user exists, or is logged in, the system throws
     # and error and the site crashes
@@ -20,7 +20,12 @@ def authentication(request):
         form = UserCreationForm()
 
         context = {'form': form}
-        return render(request, 'users/authentication.html', context)
+        return render(request, 'users/register.html', context)
+
 
 def success(request):
-    return HttpResponse("Success")
+
+    context = {
+    'user': request.user
+    }
+    return render(request, 'users/success.html', context)
